@@ -2,7 +2,7 @@
 
 ## Week 1
 ### Assigned Roles
-* Square - Shannon - repo owner
+* Square - Shannon - repository owner
 * Circle - Lee - mockup of a database(basic schema)
 * Triangle - Kyle - mockup of machine learning model
 * X - Afton - technologies
@@ -35,7 +35,7 @@
 * SQL
 * MongoDB
 * Machine Learning (Scikit Learn)
-* Tablea
+* Tableau
 
 ### Questions We Hope to Answer Through Our Analysis
 #### What neighborhoods in California area are safest taking into consideration crime and natural disasters?
