@@ -7,10 +7,6 @@
 * Triangle - Kyle - mockup of machine learning model
 * X - Afton - technologies
 
-<<<<<<< HEAD
-
-
-=======
 ### Communication
 #### We will primarily be communicating in our slack group. Lee and Shannon are available weeknights and weekends. Kyle is available evenings Sat, M, W, Th. Afton does not have a set schedule but will meet up as needed. Trello will be used to stay on task and meet deadlines.
 
@@ -43,6 +39,5 @@
 
 ### Questions We Hope to Answer Through Our Analysis
 #### What neighborhoods in California area are safest taking into consideration crime and natural disasters?
->>>>>>> main
 
 
