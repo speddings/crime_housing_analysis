@@ -92,7 +92,7 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
 
     * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data. 
 
-    * [image]()
+    * [image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NeuralNetworkVisualAid.png)
     * [Neural Networks Basics](https://social.technet.microsoft.com/wiki/contents/articles/32140.visual-basic-net-neural-networks-basics.aspx)
 
 ### Links
