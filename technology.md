@@ -1,13 +1,13 @@
-# Technologies Used
+# Technologies
 
 ## Data Cleaning and Analysis
-### Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python.
+### Python, Pandas, and uszipcode module were used to clean the data and perform an exploratory analysis in Jupyter Notebook. 
 
 ## Database Storage
-### Mongo is the database we intend to use, and we will display our data with Tableau.
+### SQL is the database we intend to use, and we will display our data with Tableau.
 
 ## Machine Learning
-### SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is neural networks. Extra ML verbiage here.
+### SciKitLearn is the ML library we'll be using to create a classifier. We plan to start with Random Forest Classifer as it does well with a large number of features and is less likely to be overfitted than neural networks. If time allows we will utilize neural networks also.
 
 ## Dashboard
 ### We plan to use Tableau to visualize our data and tell our data story.

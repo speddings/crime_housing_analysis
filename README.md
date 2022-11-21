@@ -34,7 +34,7 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
 ### Mock Up Machine Learning
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Flowcharts.jpeg)
 
-### Technologies to Use
+### Technologies
 * Jupyter Notebook - reading and cleaning data
 * Python
     * Pandas
@@ -42,9 +42,8 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
     * uszipcode - module
     [uszipcode](https://www.pythonpool.com/uszipcode-python/#:~:text=You%20can%20find%20the%20zip%20codes%20by%20using,to%20use%20them.%20How%20To%20Install%20Uszipcode%20Python%3F)
 * Jupyter Notebook - clean data
-* SQL - 
+* SQL - Structured Query Language
 * SQLAlchemy - connection string
-* PGAdmin 
 * Machine Learning (Scikit Learn)
 * Tableau
 
@@ -84,7 +83,8 @@ Random Forest Classifiers - A combination/ensemble of random decision trees for 
     * Benefits - Accuracy is typically high. It's efficiency is most prominant with large data sets. It does not overfit with more features. Forests generated could be saved and reused. 
 
     * Limitations - Random forest classifiers require a lot of computational power and resources as it builds numerous trees to combine the outputs. A lot of time is also required for training as it combines a lot of decision trees to determine the class. Due to the ensemble of the decision trees, it also can be more difficult to interpret and may struggle to determine the significance of each variable. 
-
+    
+    ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/RandomForestClassifierVisualAid.png)
     * [A Visual Guide to Random Forests](https://towardsdatascience.com/a-visual-guide-to-random-forests-b3965f453135)
 
 Neural Networks - Neural networks combine the power of our neural abilities to process data and create outputs using the input layer, hidden layers, and the output layers.
@@ -92,7 +92,7 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
 
     * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data. 
 
-    * [image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NeuralNetworkVisualAid.png)
+    ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NeuralNetworkVisualAid.png)
     * [Neural Networks Basics](https://social.technet.microsoft.com/wiki/contents/articles/32140.visual-basic-net-neural-networks-basics.aspx)
 
 ### Links
