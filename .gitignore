@@ -1,6 +1,7 @@
 Afton's ipynb
 
 # Byte-compiled / optimized / DLL files
+config.py
 __pycache__/
 *.py[cod]
 *$py.class
