@@ -30,9 +30,9 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
 [Combined Data Sets](https://drive.google.com/drive/u/0/folders/1-zhi3_Q58BbRhsWnGf-_EYHGx61R9N05)
 
 ### Mock Up Dataset
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Final%20Project%20Mockup%20database.png)
-### Mock Up Machine Learning
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Flowcharts.jpeg)
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD%20with%20Lines.png)
+### Mock Up Machine Learning - Random Forest Classifier Model
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Machine%20learning.jpeg)
 
 ### Technologies
 * Jupyter Notebook - reading and cleaning data
@@ -58,6 +58,15 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
 
 ## Week 2
 
+### Assigned Roles
+* Square - Kyle - Refine machine learning model.
+* Circle - Shannon - Continue with analysis and create visuals to accompany the story.
+* Triangle - Lee - Transform the mockup database into a full database.
+* X - Afton - Begin work on dashboard and make checkpoints against rubric.
+
+### Hypothesis
+As crime and wildfires increase the housing market value will decrease.
+
 ### Descriptions
 * Data Exploration
     * Drop unnecessary columns.
@@ -73,13 +82,35 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
     * Our preliminary data processing consisted of cleaning our data to get it ready for analysis. We had large raw datasets that we needed to drops unnessar columns and nulls as well as rename and reorder columns before they would be ready for the database. We had to change columns names from all caps to lower case for .merge to work in pandas. We then realized that we didn't have any matches to merge and used the uszipcode module in python previously mentioned.
 
 * Preliminary Feature Engineering and Preliminary Feature Selection
-    * We dropped columns we knew would were not needed. As we progress with our model we may need to fine tune our feature selection to eliminate noise. By chooseing significate features we hope to improve the performance of our model.
+    * We dropped columns we knew would were not needed. As we progress with our model we may need to fine tune our feature selection to eliminate noise. By focusing on significant features we hope to improve the performance of our model.
+
+    * For the Random Forest Classifier Model we plan to do our initial run without the Ada Boost. Ada Boost may be added to improve model accuracy.
+
+    * To input the three datasets into the Random Forest Classifier model they will be merged on city in SQL. The housing data will be an aggregate of the median housing prices. We chose the aggregate median over the aggregate average as outliers in the average could significantly skew our results. USA+California Wildfire Data will be aggregate count of cities. 
+
+    * Features
+        * aggregate count of wildfires by city
+        * violentzncrime
+        * nmanslaughter
+        * rape1
+        * robbery
+        * aggravated\nassault
+        * property\ncrime
+        * burglary
+        * larceny-\ntheft
+        * motor\nvehicle\ntheft
+        * arson
+        * city
+    * Target
+        * Housing prices/mo
 
 * How Data Was Split Into Training and Testing Sets
+    * Train-test split is a technique that allows us to evaluate the performance of our machine learning model. We will be using the default of 70/30 split. 
 
 * Model Choice - Random Forest Classifiers | Neural Networks
 
 Random Forest Classifiers - A combination/ensemble of random decision trees for classification. The output of the random forest is the class selected by most trees, like an average prediction.
+
     * Benefits - Accuracy is typically high. It's efficiency is most prominant with large data sets. It does not overfit with more features. Forests generated could be saved and reused. 
 
     * Limitations - Random forest classifiers require a lot of computational power and resources as it builds numerous trees to combine the outputs. A lot of time is also required for training as it combines a lot of decision trees to determine the class. Due to the ensemble of the decision trees, it also can be more difficult to interpret and may struggle to determine the significance of each variable. 
@@ -88,6 +119,7 @@ Random Forest Classifiers - A combination/ensemble of random decision trees for 
     * [A Visual Guide to Random Forests](https://towardsdatascience.com/a-visual-guide-to-random-forests-b3965f453135)
 
 Neural Networks - Neural networks combine the power of our neural abilities to process data and create outputs using the input layer, hidden layers, and the output layers.
+
     * Benefits - Neural networks lead to effective visual analysis since an artificial neural network is similar to that of a human's neural network. It can process unorganized data. They may not require as much training time as artificial neural networks quickly transform, adapt, and adjust to new environments. Neural networks typicall have a user-friendly interface.
 
     * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data. 
@@ -95,6 +127,33 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
     ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NeuralNetworkVisualAid.png)
     * [Neural Networks Basics](https://social.technet.microsoft.com/wiki/contents/articles/32140.visual-basic-net-neural-networks-basics.aspx)
 
+### Dashboard
+* Description of Tools
+    * Our dashboard will be created with Tableau. Tableau was founded in 2003 by Chris Stolte, Pat Hanrahan and Christian Chabot. Tableau has quickly become a go to choice by many professionals for data visualization due to it's drag and drop actions into data queries as well as it's intuitive interface. Tableau was acquired by Salesforce in 2019 but still focuses on helping people see and understand their data. You can find more information on Tableau at:
+    [Tableau Info.](https://www.tableau.com/why-tableau/what-is-tableau)
+
+        * Tableau Outline
+        Data Source
+            * ca_fire.csv
+            * clean_ca_crime.csv
+            * clean_ca_housing.csv
+        Sheets
+            * Population of Cities
+            * Pie Chart of Crime
+            * Murder per City
+            * Wildfires by City per Zip Code
+            * Wildfires by City in a Month
+            * Wildfires per Month
+                * Outliers
+        Dashboard
+
+    * Our presentation is being created in Google Slides. Benefits of Goggle Slides include: 
+        * Real-Time Collaboration
+        * It is a Web-Based Application
+        * Presentations are Accessible from any Device
+        * Google Slides Allows you to Embed Videos
+        * Slides Save Automatically
+
 ### Links
-[Tableau](https://public.tableau.com/views/CrimeHouseingAnalysis/Dashboard2?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/FireandCrimePredictionHousingMarket/FiresperMonth?publish=yes)
 [Presentation](https://docs.google.com/presentation/d/1-puxLIPB6Hh_OjgRc4uT9RSXgNqcqybiYex7fpONIfU/edit?usp=sharing)
