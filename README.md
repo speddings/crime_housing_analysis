@@ -155,5 +155,6 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
         * Slides Save Automatically
 
 ### Links
-[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/FireandCrimePredictionHousingMarket/FiresperMonth?publish=yes)
+[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/Story1?publish=yes)
+
 [Presentation](https://docs.google.com/presentation/d/1-puxLIPB6Hh_OjgRc4uT9RSXgNqcqybiYex7fpONIfU/edit?usp=sharing)
