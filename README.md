@@ -65,7 +65,7 @@ As crime and wildfires increase the housing market value will decrease.
 
 ## Machine Learning Model
 ### Mock Up Machine Learning - Random Forest Classifier Model
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Machine%20learning.jpeg)
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Machine%20Learning.png)
 
 * Preliminary Data Processing
     * Our preliminary data processing consisted of cleaning our data to get it ready for analysis. We had large raw datasets that we needed to drops unnessar columns and nulls as well as rename and reorder columns before they would be ready for the database. We had to change columns names from all caps to lower case for .merge to work in pandas. We then realized that we didn't have any matches to merge and used the uszipcode module in python previously mentioned.
@@ -115,7 +115,7 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
 
 ## Database
 ### Mock Up Database
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD%20with%20Lines.png)
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD.png)
 
 ## Dashboard
 
