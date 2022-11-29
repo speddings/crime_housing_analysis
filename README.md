@@ -1,38 +1,12 @@
-# Crime and Wildfire Housing Analysis
+# Housing Analysis with Crime and Wildfire Data
 
-## Week 1
-### Assigned Roles
-* Square - Shannon - repository owner
-* Circle - Lee - mockup of a database(basic schema)
-* Triangle - Kyle - mockup of machine learning model
-* X - Afton - technologies
+[Presentation](https://docs.google.com/presentation/d/1-puxLIPB6Hh_OjgRc4uT9RSXgNqcqybiYex7fpONIfU/edit?usp=sharing)
 
-### Communication
-We will primarily be communicating in our slack group. Lee and Shannon are available weeknights and weekends. Kyle is available evenings Sat, M, W, Th. Afton does not have a set schedule but will meet up as needed. Trello will be used to stay on task and meet deadlines. Zoom will be utilizted to collaborate outside of class times.
-[Trello](https://trello.com/invite/b/PgQ0nXA4/ATTIa4dccc45909e55e864ab3e269c1ccfe45A9532FE/final-project)
-
-### Seclected Topic
-#### Crime and Wildfire Housing Analysis
-We will be looking at the impact of wildfires and crime on housing prices in CA and the safey of the neighborhoods based on the wildfires and crime features.
-
-### Reason for Selected Topic
-We wanted to try to do something a little different while working with datasets we would be able to understand without extensive research due to time constraints. We also wanted to pick datasets that would allow for visualizations for the final presentation.
-
-### Description of the Source of Data
-[USA+California Wildfire Data](https://www.kaggle.com/datasets/avkashchauhan/california-wildfire-dataset-from-2000-2021)
-This data set was found on Kaggle and is from the NASA website.
-[California Crime Data](https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls)
-This dataset is from the FBI.
-[Housing Data](https://www.zillow.com/research/data/)
-This data is from Zillow
-[OpenAddresses - CA](https://www.kaggle.com/datasets/openaddresses/openaddresses-us-west?select=ca.csv)
-This data was found on Kaggle but is from OpenAddresses and is needed to convert longitude and lattitude pairs to zip codes.
-[Combined Data Sets](https://drive.google.com/drive/u/0/folders/1-zhi3_Q58BbRhsWnGf-_EYHGx61R9N05)
-
-### Mock Up Dataset
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD%20with%20Lines.png)
-### Mock Up Machine Learning - Random Forest Classifier Model
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Machine%20learning.jpeg)
+## Team Members and Roles
+* Shannon - Repository Owner, Data Cleaning, Image Selection
+* Lee - Database
+* Kyle - Machine Learning
+* Afton - Technologies, Dashboard, Presentation, ReadMe Editor
 
 ### Technologies
 * Jupyter Notebook - reading and cleaning data
@@ -45,8 +19,16 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
 * SQL - Structured Query Language
 * SQLAlchemy - connection string
 * Machine Learning (Scikit Learn)
-* Tableau
+* Tableau - Dashboard and Storyboard
 
+## Project Overview
+Topic: Housing Analysis with Crime and Wildfire Data
+
+We will be looking at the impact of wildfires and crime on housing prices in CA and the safey of the neighborhoods based on the wildfires and crime features.
+
+We wanted to try to do something a little different while working with datasets we would be able to understand without extensive research due to time constraints. We also wanted to pick datasets that would allow for visualizations for the final presentation.
+
+Our presentation will be meaningful as it is taking into account dangers in areas of CA and creating filterable visualizations for others.
 
 ### Questions We Hope to Answer Through Our Analysis
 * What neighborhoods in California area are safest taking into consideration crime and natural disasters?
@@ -56,18 +38,18 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
 * Which zip codes were impacted by wildfires?
 * How does the crime and wilfires data effect the house pricing data?
 
-## Week 2
+## Analysis
+### Description of the Source of Data
+[USA+California Wildfire Data](https://www.kaggle.com/datasets/avkashchauhan/california-wildfire-dataset-from-2000-2021)
+This data set was found on Kaggle and is from the NASA website.
+[California Crime Data](https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/california.xls)
+This dataset is from the FBI.
+[Housing Data](https://www.zillow.com/research/data/)
+This data is from Zillow
+[OpenAddresses - CA](https://www.kaggle.com/datasets/openaddresses/openaddresses-us-west?select=ca.csv)
+This data was found on Kaggle but is from OpenAddresses and is needed to convert longitude and lattitude pairs to zip codes.
+[Combined Data Sets](https://drive.google.com/drive/u/0/folders/1-zhi3_Q58BbRhsWnGf-_EYHGx61R9N05)
 
-### Assigned Roles
-* Square - Kyle - Refine machine learning model.
-* Circle - Shannon - Continue with analysis and create visuals to accompany the story.
-* Triangle - Lee - Transform the mockup database into a full database.
-* X - Afton - Begin work on dashboard and make checkpoints against rubric.
-
-### Hypothesis
-As crime and wildfires increase the housing market value will decrease.
-
-### Descriptions
 * Data Exploration
     * Drop unnecessary columns.
     * Drop nulls.
@@ -77,6 +59,13 @@ As crime and wildfires increase the housing market value will decrease.
 
 * Analysis
     * On further analysis of our prelimary selected datasets we realized we would need to add the OpenAddresses dataset because the wildfire dataset contained lattitudes and longitudes instead of zip codes. While trying to merge on zip code we then had issues with no lattitude and longitude pairs matching. While looking for other options we discovered a python module, uszipcode, that uses data from datasets from 2018 to 2020 that allowed us to get cities for our lattitude,longitude pairs without making API calls. 
+
+### Hypothesis
+As crime and wildfires increase the housing market value will decrease.
+
+## Machine Learning Model
+### Mock Up Machine Learning - Random Forest Classifier Model
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Machine%20learning.jpeg)
 
 * Preliminary Data Processing
     * Our preliminary data processing consisted of cleaning our data to get it ready for analysis. We had large raw datasets that we needed to drops unnessar columns and nulls as well as rename and reorder columns before they would be ready for the database. We had to change columns names from all caps to lower case for .merge to work in pandas. We then realized that we didn't have any matches to merge and used the uszipcode module in python previously mentioned.
@@ -122,38 +111,32 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
 
     * Benefits - Neural networks lead to effective visual analysis since an artificial neural network is similar to that of a human's neural network. It can process unorganized data. They may not require as much training time as artificial neural networks quickly transform, adapt, and adjust to new environments. Neural networks typicall have a user-friendly interface.
 
-    * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data. 
+    * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data.
 
-    ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NeuralNetworkVisualAid.png)
-    * [Neural Networks Basics](https://social.technet.microsoft.com/wiki/contents/articles/32140.visual-basic-net-neural-networks-basics.aspx)
+## Database
+### Mock Up Database
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD%20with%20Lines.png)
 
-### Dashboard
-* Description of Tools
-    * Our dashboard will be created with Tableau. Tableau was founded in 2003 by Chris Stolte, Pat Hanrahan and Christian Chabot. Tableau has quickly become a go to choice by many professionals for data visualization due to it's drag and drop actions into data queries as well as it's intuitive interface. Tableau was acquired by Salesforce in 2019 but still focuses on helping people see and understand their data. You can find more information on Tableau at:
-    [Tableau Info.](https://www.tableau.com/why-tableau/what-is-tableau)
+## Dashboard
 
-        * Tableau Outline
-        Data Source
-            * ca_fire.csv
-            * clean_ca_crime.csv
-            * clean_ca_housing.csv
-        Sheets
-            * Population of Cities
-            * Pie Chart of Crime
-            * Murder per City
-            * Wildfires by City per Zip Code
-            * Wildfires by City in a Month
-            * Wildfires per Month
-                * Outliers
-        Dashboard
+Tableau Outline
+    Data Source
+        * ca_fire.csv
+        * clean_ca_crime.csv
+        * clean_ca_housing.csv
+    Sheets
+        * Population of Cities
+        * Crime Chart
+        * Murder per City
+        * Wildfires by City per Zip Code
+        * Wildfires by City in a Month
+        * Wildfires per Month
+            * Outliers
+        * Crime by Zip code
+        * Fire and Housing Data
+        * Housing Data
+    Dashboard
+        * Fire and Housing Data filterable by City
+        * Crime by Zip Code filterable by Zip Code
 
-    * Our presentation is being created in Google Slides. Benefits of Goggle Slides include: 
-        * Real-Time Collaboration
-        * It is a Web-Based Application
-        * Presentations are Accessible from any Device
-        * Google Slides Allows you to Embed Videos
-        * Slides Save Automatically
-
-### Links
-[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/FireandCrimePredictionHousingMarket/FiresperMonth?publish=yes)
-[Presentation](https://docs.google.com/presentation/d/1-puxLIPB6Hh_OjgRc4uT9RSXgNqcqybiYex7fpONIfU/edit?usp=sharing)
+[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/Story1?publish=yes)
