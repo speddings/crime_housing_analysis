@@ -28,7 +28,7 @@ We will be looking at the impact of wildfires and crime on housing prices in CA 
 
 ### Questions We Hope to Answer Through Our Analysis
 * Considering crime and wildfires, which city/zip codes are safest?
-* Is there a relation between wildfire and crime?
+* Is there a relation between wildfires and crime?
 * How does the crime and wildfires data effect the house pricing data?
 
 ### Hypothesis
@@ -52,6 +52,10 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
     * Rename columns.
     * Check data types and unique values.
     * Reorder columns.
+
+Example Code 
+
+![image]()
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ca_fire_tbl.png)
 
@@ -127,9 +131,14 @@ Neural Networks - Neural networks combine the power of our neural abilities to p
     * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data.
 
 ## Dashboard
-We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder.
+We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder. These changes are shown below.
 
-![Original clean_ca_housing.csv]()
+
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/housinganlysisT.png)
+
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/CodeforHousingTableau.png)
+
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NewHousingTableau.png)
 
 Tableau Outline
     Data Source
@@ -137,19 +146,11 @@ Tableau Outline
         * clean_ca_crime.csv
         * clean_ca_housing.csv
         * clean_ca_housing_new_one.csv
-    Sheets
-        * Population of Cities
-        * Crime Chart
-        * Sum of Crime by City
-        * Wildfires by City per Zip Code
-        * Wildfires by City in a Month
-        * Wildfires per Month
-            * Outliers
-        * Crime by Zip code
-        * Fire and Housing Data
-        * Housing Data
-    Dashboard
-        * Fire and Housing Data filterable by City
-        * Crime by Zip Code filterable by Zip Code
+
+    Dashboard Interactivity
+        * Fire and Housing Data filterable by Median Housing Price.
+        * Populations Map adjust other maps to show selected cities.
+
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/dashboard.png)
 
 [Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/CAMedianHousingPriceAnalysiswithWildfireandCrimeData2019?publish=yes)
