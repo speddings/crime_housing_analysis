@@ -55,7 +55,9 @@ This data was found on Kaggle but is from OpenAddresses and is needed to convert
 
 Example Code 
 
-![image]()
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/CleaningCode.png)
+
+Cleaned Tables
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ca_fire_tbl.png)
 
@@ -64,19 +66,26 @@ Example Code
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ca_housing_median_tbl.png)
 
 * Analysis
-    * On further analysis of our prelimary selected datasets we thought we would need to add the OpenAddresses dataset because the wildfire dataset contained lattitudes and longitudes instead of zip codes. While trying to merge on zip code we then had issues with no lattitude and longitude pairs matching. While looking for other options we discovered a python module, uszipcode, that uses data from datasets from 2018 to 2020 that allowed us to get cities for our lattitude,longitude pairs without making API calls. 
+    * On further analysis of our prelimary selected datasets we thought we would need to add the OpenAddresses dataset because the wildfire dataset contained lattitudes and longitudes instead of zip codes. While trying to merge on zip code we then had issues with no lattitude and longitude pairs matching. While looking for other options we discovered a python module, uszipcode, that uses data from datasets from 2018 to 2020 that allowed us to get cities for our lattitude,longitude pairs without making API calls.
+    
+Code
+
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/zipcodeCode.png)
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ca_fire_city_tbl.png)
 
 ## Database
 ### Mock Up Database
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD.png)
 
 SQL Database Process
 Before setting up the database, the first step was to receive and download the clean datasets locally to import the dependencies in order to use SQLAlchemy for the process.
 After importing all the dependencies, the next step was to setup the database on pgAdmin. First using the schema query tools to create the tables that we will be using throughout the project. There were three tables that were used, ca_crime, ca_housing_median, and ca_fire. Upon creating the three tables on pgAdmin, the next step was to import the data into the tables that were created.
 The import was not successful at times due to the data having null values or the varchar was too short/long. The clean up was quick and was done through Jupyter Notebook. Upon the successful imports, the next step was going back to the ipynb file and to insert the link, username, and password for the members to be able to access the database. In order to make it accessible, the necessary step was to create an AWS database, and to replace the host section on postgres link with the AWS endpoint link.
 The database was finalized, tested, and was accessible. The next step was to merge the tables into one, while also dropping unnecessary columns. The step was done through creating a SQL query via the query tool on pgAdmin. By using the JOIN commands to join the relationships and afterwards creating a new table named ‘Final’. The database was clean, merged, and accessible and ready to connect for the Machine Learning Model.
+
+
+
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD.png)
 
 ## Machine Learning Model
 ### Mock Up Machine Learning - Random Forest Classifier Model
