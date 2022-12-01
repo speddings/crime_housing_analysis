@@ -15,6 +15,7 @@
     * Tensorflow
     * uszipcode - module
     [uszipcode](https://www.pythonpool.com/uszipcode-python/#:~:text=You%20can%20find%20the%20zip%20codes%20by%20using,to%20use%20them.%20How%20To%20Install%20Uszipcode%20Python%3F)
+    
 * Jupyter Notebook - clean data
 * SQL - Structured Query Language
 * SQLAlchemy - connection string
