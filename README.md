@@ -79,12 +79,12 @@ Code
 ### Mock Up Database
 
 SQL Database Process
-Before setting up the database, the first step was to receive and download the clean datasets locally to import the dependencies in order to use SQLAlchemy for the process.
-After importing all the dependencies, the next step was to setup the database on pgAdmin. First using the schema query tools to create the tables that we will be using throughout the project. There were three tables that were used, ca_crime, ca_housing_median, and ca_fire. Upon creating the three tables on pgAdmin, the next step was to import the data into the tables that were created.
-The import was not successful at times due to the data having null values or the varchar was too short/long. The clean up was quick and was done through Jupyter Notebook. Upon the successful imports, the next step was going back to the ipynb file and to insert the link, username, and password for the members to be able to access the database. In order to make it accessible, the necessary step was to create an AWS database, and to replace the host section on postgres link with the AWS endpoint link.
-The database was finalized, tested, and was accessible. The next step was to merge the tables into one, while also dropping unnecessary columns. The step was done through creating a SQL query via the query tool on pgAdmin. By using the JOIN commands to join the relationships and afterwards creating a new table named ‘Final’. The database was clean, merged, and accessible and ready to connect for the Machine Learning Model.
-
-
+* Receive and download the clean datasets locally to import the dependencies in order to use SQLAlchemy for the process.
+* Setup the database on pgAdmin. First using the schema query tools to create the tables that we will be using throughout the project. There were three tables that were used, ca_crime, ca_housing_median, and ca_fire.
+* Import the data into the tables that were created. The import was not successful at times due to the data having null values or the varchar was too short/long. The clean up was quick and was done through Jupyter Notebook. 
+* Return to the ipynb file and insert the link, username, and password for the members to be able to access the database. In order to make it accessible, the necessary step was to create an AWS database, and to replace the host section on postgres link with the AWS endpoint link.
+* The database was finalized, tested, and was accessible. 
+* Merge the tables into one, while also dropping unnecessary columns. The step was done through creating a SQL query via the query tool on pgAdmin. By using the JOIN commands to join the relationships and afterwards creating a new table named ‘Final’. The database was clean, merged, and accessible and ready to connect for the Machine Learning Model.
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD.png)
 
@@ -122,17 +122,19 @@ The database was finalized, tested, and was accessible. The next step was to mer
 * How Data Was Split Into Training and Testing Sets
     * We used the default 70/30 split. To test if we have a good split we will change the split to see if the change makes a difference.
 
-* Model Choice - Random Forest Classifiers | Neural Networks
+* Model Choice - SGD Classifier | Neural Networks
 
-Random Forest Classifiers - A combination/ensemble of random decision trees for classification. The output of the random forest is the class selected by most trees, like an average prediction.
+Stochastic Gradient Descent - Classifier (SGD-Classifier) is a linear classifier optimized by the SGD. Stochastic gradien descent computes the gradient using a single sample. SGD is very efficient for large scale problems because it allows minibatch learning. It is particularly important to scale the features when using the SGD.
 
-    * Benefits - Accuracy is typically high. It's efficiency is most prominant with large data sets. It does not overfit with more features. Forests generated could be saved and reused. 
+Benefits of SGD
+    * SGD easier to fit into memory due to a single training sample being processed by the network.
+    * SGD computationally fast as only one sample is processed at a time.
+    * For larger datasets SGD can converge faster as it causes updates to the parameters more frequently.
 
-    * Limitations - Random forest classifiers require a lot of computational power and resources as it builds numerous trees to combine the outputs. A lot of time is also required for training as it combines a lot of decision trees to determine the class. Due to the ensemble of the decision trees, it also can be more difficult to interpret and may struggle to determine the significance of each variable. 
-    
-    ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/RandomForestClassifierVisualAid.png)
+Limitations of SGD
+    * SGD requires a number of hyperparameters and a number of iterations.
+    * SGD is sensitive to feature scaling.
 
-    * [A Visual Guide to Random Forests](https://towardsdatascience.com/a-visual-guide-to-random-forests-b3965f453135)
 
 Neural Networks - Neural networks combine the power of our neural abilities to process data and create outputs using the input layer, hidden layers, and the output layers.
 
