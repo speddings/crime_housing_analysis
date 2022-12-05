@@ -135,6 +135,9 @@ Limitations of SGD
     * SGD requires a number of hyperparameters and a number of iterations.
     * SGD is sensitive to feature scaling.
 
+Code
+
+R-squared
 
 Neural Networks - Neural networks combine the power of our neural abilities to process data and create outputs using the input layer, hidden layers, and the output layers.
 
