@@ -1,1 +1,1 @@
-db_password ='CoysSonny$8'
+db_password ='KUBootcamp22'
