@@ -120,10 +120,9 @@ SQL Database Process
         * Housing prices/mo
 
 * How Data Was Split Into Training and Testing Sets
-    * We used the default 70/30 split. To test if we have a good split we will change the split to see if the change makes a difference.
+    * We started with the default test/train split. To test if we have a good split we will change the split to see if the change makes a difference.
 
-* Model Choice - SGD Classifier | Neural Networks
-
+* Model Choice - SGD Classifier 
 Stochastic Gradient Descent - Classifier (SGD-Classifier) is a linear classifier optimized by the SGD. Stochastic gradien descent computes the gradient using a single sample. SGD is very efficient for large scale problems because it allows minibatch learning. It is particularly important to scale the features when using the SGD.
 
 Benefits of SGD
@@ -135,12 +134,11 @@ Limitations of SGD
     * SGD requires a number of hyperparameters and a number of iterations.
     * SGD is sensitive to feature scaling.
 
+Code
 
-Neural Networks - Neural networks combine the power of our neural abilities to process data and create outputs using the input layer, hidden layers, and the output layers.
+R-squared
 
-    * Benefits - Neural networks lead to effective visual analysis since an artificial neural network is similar to that of a human's neural network. It can process unorganized data. They may not require as much training time as artificial neural networks quickly transform, adapt, and adjust to new environments. Neural networks typicall have a user-friendly interface.
 
-    * Limitations - Neural networks may require heavier machinery and hardware as compared to other models and cost more to invest it. Neural networks can often create incomplete results/outputs. To prevent faulty/distorted findings neural networks need to be large amounts of data.
 
 ## Dashboard
 We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder. These changes are shown below.
