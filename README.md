@@ -138,14 +138,29 @@ Limitations of SGD
     * SGD requires a number of hyperparameters and a number of iterations.
     * SGD is sensitive to feature scaling.
 
-Code
+* Code
+![SGD Regressor Setup](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/MachineLearningSetup.png)
 
-R-squared
+Test 1 gave us the best accuracy score of 61% using random state 1 and default test-train split.
+
+![Test1](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test1.png)
+
+Test 2 gave us an accuracy score of 37% using a random state of 2.
+
+![Test2](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test2.png)
+
+Test 3 gave us an accuracy score of 46% using a randome state of 3.
+
+![Test3](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test3.png)
+
+Test 4 gave us an accuracy score of -2.79 using a randome state of 1 and a 70/30 test-train split.
+
+![Test4](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test4.png)
 
 
 
 ## Dashboard
-We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder. These changes are shown below.
+We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder. The transformation of the clean_ca_housing.csv is shown below.
 
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/housinganlysisT.png)
@@ -167,4 +182,4 @@ Tableau Outline
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/dashboard.png)
 
-[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/CAMedianHousingPriceAnalysiswithWildfireandCrimeData2019?publish=yes)
+[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/Story1?publish=yes)
