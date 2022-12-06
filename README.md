@@ -170,6 +170,7 @@ We couldn't filter by housing price with our current data sets so the clean_ca_h
 ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NewHousingTableau.png)
 
 Tableau Outline
+
     Data Source
         * ca_fire.csv
         * clean_ca_crime.csv
@@ -180,6 +181,6 @@ Tableau Outline
         * Fire and Housing Data filterable by Median Housing Price.
         * Populations Map adjust other maps to show selected cities.
 
-![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/dashboard.png)
+![image]()
 
 [Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/Story1?publish=yes)
