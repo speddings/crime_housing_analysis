@@ -120,7 +120,7 @@ SQL Database Process
         * Housing prices/mo
 
 * How Data Was Split Into Training and Testing Sets
-    * We used the default 70/30 split. To test if we have a good split we will change the split to see if the change makes a difference.
+    * We started with the default test/train split. To test if we have a good split we will change the split to see if the change makes a difference.
 
 * Model Choice - SGD Classifier 
 Stochastic Gradient Descent - Classifier (SGD-Classifier) is a linear classifier optimized by the SGD. Stochastic gradien descent computes the gradient using a single sample. SGD is very efficient for large scale problems because it allows minibatch learning. It is particularly important to scale the features when using the SGD.
