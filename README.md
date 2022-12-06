@@ -181,6 +181,6 @@ Tableau Outline
         * Fire and Housing Data filterable by Median Housing Price.
         * Populations Map adjust other maps to show selected cities.
 
-![image]()
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/dashboard.png)
 
 [Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/Story1?publish=yes)
