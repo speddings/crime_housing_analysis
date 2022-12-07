@@ -86,10 +86,10 @@ SQL Database Process
 * The database was finalized, tested, and was accessible. 
 * Merge the tables into one, while also dropping unnecessary columns. The step was done through creating a SQL query via the query tool on pgAdmin. By using the JOIN commands to join the relationships and afterwards creating a new table named ‘Final’. The database was clean, merged, and accessible and ready to connect for the Machine Learning Model.
 
-![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD.png)
+![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/ERD%20with%20Lines.png)
 
 ## Machine Learning Model
-### Mock Up Machine Learning - Random Forest Classifier Model
+### Mock Up Machine Learning - SGD Regressor
 ![image](https://github.com/speddings/crime_housing_analysis/blob/main/Images/Machine%20Learning.png)
 
 * Preliminary Data Preprocessing
@@ -99,31 +99,35 @@ SQL Database Process
     * We dropped columns we knew would were not needed. As we progress with our model we may need to fine tune our feature selection to eliminate noise. By focusing on significant features we hope to improve the performance of our model.
 
 
-    * For the Random Forest Classifier Model we plan to do our initial run without the Ada Boost. Ada Boost may be added to improve model accuracy.
+    * SGD Regressor pipeline will be used. Default setting for train/test/split will be used.
 
-    * To input the three datasets into the Random Forest Classifier model they will be merged on city in SQL. The housing data will be an aggregate of the median housing prices. We chose the aggregate median over the aggregate average as outliers in the average could significantly skew our results. USA+California Wildfire Data will be aggregate count of cities. 
+    * To input the three datasets into the model they will be merged on city in SQL. The housing data will be an aggregate of the median housing prices. We chose the aggregate median over the aggregate average as outliers in the average could significantly skew our results. USA+California Wildfire Data will be aggregate count of cities. 
 
     * Features
-        * aggregate count of wildfires by city
-        * violentzncrime
-        * nmanslaughter
-        * rape1
-        * robbery
-        * aggravated\nassault
-        * property\ncrime
-        * burglary
-        * larceny-\ntheft
-        * motor\nvehicle\ntheft
-        * arson
         * city
+        * population
+        * violent crime
+        * murder
+        * manslaughter
+        * rape
+        * robbery
+        * aggravated assault
+        * property crime
+        * burglary
+        * larceny
+        * motor vehicle theft
+        * arson
+        * housing prices/mo
+        * count of wildfires
+        * yearly median prices
     * Target
         * Housing prices/mo
 
 * How Data Was Split Into Training and Testing Sets
-    * We started with the default test/train split. To test if we have a good split we will change the split to see if the change makes a difference.
+    * We started with the default train-test split. To test if we have a good split we will change the split to see if the change makes a difference. The changes gave us a negative score so we kept the default train-test split.
 
 * Model Choice - SGD Classifier 
-Stochastic Gradient Descent - Classifier (SGD-Classifier) is a linear classifier optimized by the SGD. Stochastic gradien descent computes the gradient using a single sample. SGD is very efficient for large scale problems because it allows minibatch learning. It is particularly important to scale the features when using the SGD.
+Stochastic Gradient Descent - Classifier (SGD-Classifier) is a linear classifier optimized by the SGD. Stochastic gradient descent computes the gradient using a single sample. SGD is very efficient for large scale problems because it allows minibatch learning. It is particularly important to scale the features when using the SGD.
 
 Benefits of SGD
     * SGD easier to fit into memory due to a single training sample being processed by the network.
@@ -134,14 +138,29 @@ Limitations of SGD
     * SGD requires a number of hyperparameters and a number of iterations.
     * SGD is sensitive to feature scaling.
 
-Code
+* Code
+![SGD Regressor Setup](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/MachineLearningSetup.png)
 
-R-squared
+Test 1 gave us the best accuracy score of 61% using random state 1 and default test-train split.
+
+![Test1](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test1.png)
+
+Test 2 gave us an accuracy score of 37% using a random state of 2.
+
+![Test2](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test2.png)
+
+Test 3 gave us an accuracy score of 46% using a randome state of 3.
+
+![Test3](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test3.png)
+
+Test 4 gave us an accuracy score of -2.79 using a randome state of 1 and a 70/30 test-train split.
+
+![Test4](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/Test4.png)
 
 
 
 ## Dashboard
-We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder. These changes are shown below.
+We couldn't filter by housing price with our current data sets so the clean_ca_housing.csv was reworked to allow for that filtering capability. Also, the crime was summed so that the filter would show the city with the highest crime total vs. only one crime such as murder. The transformation of the clean_ca_housing.csv is shown below.
 
 
 ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/housinganlysisT.png)
@@ -151,6 +170,7 @@ We couldn't filter by housing price with our current data sets so the clean_ca_h
 ![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/NewHousingTableau.png)
 
 Tableau Outline
+
     Data Source
         * ca_fire.csv
         * clean_ca_crime.csv
@@ -161,6 +181,6 @@ Tableau Outline
         * Fire and Housing Data filterable by Median Housing Price.
         * Populations Map adjust other maps to show selected cities.
 
-![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/dashboard.png)
+![image](https://github.com/speddings/crime_housing_analysis/blob/AftonsBranch/Images/dashboard.png)
 
-[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/CAMedianHousingPriceAnalysiswithWildfireandCrimeData2019?publish=yes)
+[Tableau](https://public.tableau.com/app/profile/afton.snider/viz/HousingAnalysiswithCrimeandWildfireData/Story1?publish=yes)
